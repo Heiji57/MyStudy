@@ -14,7 +14,9 @@
 현재 폴더에서 변한 내용 github에 추가
 ### ```git commit -m "메세지"``` (커밋하기)
 커밋을 통해 이 커밋에 대한 버전을 남김. 
->메세지에는 보통 새 파일 추가 시 Add, 기능 추가 시 Implement, 버그 수정 시 Fix, 리펙토링 시 Refactor, 삭제 시 Remove를 사용한다.
+>메세지에는 보통 새 파일 추가 시 add, 기능 추가 시 feat, 버그 수정 시 fix, 리펙토링 시 refactor.
+[[commit 규칙](https://ivory-room.tistory.com/93)]
+
 ### ```git log``` (log 화면)
 이 폴더에 대한 활동 기록 확인
 ### ```git diff``` (차이 확인)
