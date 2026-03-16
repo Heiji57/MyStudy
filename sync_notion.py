@@ -227,9 +227,7 @@ def main():
         for page in pages:
             try:
                 props = page['properties']
-                if not props[NOTION_PROPERTY_DATE]['date']:
-                    continue
-                page_date = props[NOTION_PROPERTY_DATE]['date']['start']
+                page_date = props[NOTION_PROPERTY_DATE]['created_time'] 
             except KeyError:
                 continue
 
