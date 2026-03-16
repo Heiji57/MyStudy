@@ -8,8 +8,8 @@ from datetime import datetime, timezone, timedelta
 # =======================================================
 
 SAVE_DIR_ROOT = "TIL" 
-NOTION_PROPERTY_TITLE = "제목"
-NOTION_PROPERTY_DATE = "날짜"
+NOTION_PROPERTY_TITLE = "이름"
+NOTION_PROPERTY_DATE = "생성일"
 README_FILE = "README.md"
 MARKER_START = ""
 MARKER_END = ""
@@ -196,7 +196,7 @@ def update_main_readme_by_scanning(reset_mode):
         f.write(final_content)
 
 def main():
-    fetch_mode = os.environ.get('FETCH_MODE', 'DAILY')
+    fetch_mode = os.environ.get('FETCH_MODE', 'ALL')
     reset_mode = os.environ.get('RESET_MODE', 'false').lower() # 문자열 'true'/'false' 처리
     
     url = f"https://api.notion.com/v1/databases/{DATABASE_ID}/query"
@@ -227,7 +227,7 @@ def main():
         for page in pages:
             try:
                 props = page['properties']
-                if not props[NOTION_PROPERTY_DATE]['date']:
+                if not props[NOTION_PROPERTY_DATE]['created_date']:
                     continue
                 page_date = props[NOTION_PROPERTY_DATE]['date']['start']
             except KeyError:
