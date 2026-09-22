@@ -1,25 +1,25 @@
 > ### Level 1
 > ---
-> 📊 [연결된 데이터베이스](https://app.notion.com/p/3483b79942918000971bda0439fdef4e)
+> 📊 [연결된 데이터베이스](<프로그래머스 (Programmers)/Level 1/>)
 
 ---
 
 > ### Level 2
 > ---
-> 📊 [연결된 데이터베이스](https://app.notion.com/p/3483b79942918161bd6bf07847ac1337)
+> 📊 [연결된 데이터베이스](<프로그래머스 (Programmers)/Level 2/>)
 
 ---
 
 > ### Level 3
 > ---
-> 📊 [연결된 데이터베이스](https://app.notion.com/p/3483b7994291815fa690c476a3cc75c3)
+> 📊 [연결된 데이터베이스](<프로그래머스 (Programmers)/Level 3/>)
 
 > ### Level 4
 > ---
-> 📊 [연결된 데이터베이스](https://app.notion.com/p/3483b799429181c5b669da41a44873f6)
+> 📊 [연결된 데이터베이스](<프로그래머스 (Programmers)/Level 4/>)
 
 ---
 
 > ### Level 5
 > ---
-> 📊 [연결된 데이터베이스](https://app.notion.com/p/3483b799429181599101eb0c10917920)
+> 📊 [연결된 데이터베이스](<프로그래머스 (Programmers)/Level 5/>)
