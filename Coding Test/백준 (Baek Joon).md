@@ -1,24 +1,24 @@
 > ### 🥉 Bronze
 > ---
-> 📊 [연결된 데이터베이스](<백준 (Baek Joon)/Bronze/>)
+> 📊 [Bronze](<백준 (Baek Joon)/Bronze/>)
 > ### ☘️ platinum
 > ---
-> 📊 [연결된 데이터베이스](<백준 (Baek Joon)/platinum/>)
+> 📊 [platinum](<백준 (Baek Joon)/platinum/>)
 
 ---
 
 > ### 🥈 Silver
 > ---
-> 📊 [연결된 데이터베이스](<백준 (Baek Joon)/Silver/>)
+> 📊 [Silver](<백준 (Baek Joon)/Silver/>)
 > ### 💎 diamond
 > ---
-> 📊 [연결된 데이터베이스](<백준 (Baek Joon)/diamond/>)
+> 📊 [diamond](<백준 (Baek Joon)/diamond/>)
 
 ---
 
 > ### 🏅 Gold
 > ---
-> 📊 [연결된 데이터베이스](<백준 (Baek Joon)/Gold/>)
+> 📊 [Gold](<백준 (Baek Joon)/Gold/>)
 > ### ♥️ Ruby
 > ---
-> 📊 [연결된 데이터베이스](<백준 (Baek Joon)/Ruby/>)
+> 📊 [Ruby](<백준 (Baek Joon)/Ruby/>)

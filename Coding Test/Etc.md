@@ -1,21 +1,21 @@
 > ### Greedy
 > ---
-> 📊 [연결된 데이터베이스](Etc/Greedy/)
+> 📊 [Greedy](Etc/Greedy/)
 > ### Sort
 > ---
-> 📊 [연결된 데이터베이스](Etc/Sort/)
+> 📊 [Sort](Etc/Sort/)
 
 ---
 
 > ### 구현
 > ---
-> 📊 [연결된 데이터베이스](Etc/구현/)
+> 📊 [구현](Etc/구현/)
 > ### DP
 > ---
-> 📊 [연결된 데이터베이스](Etc/DP/)
+> 📊 [DP](Etc/DP/)
 
 ---
 
 > ### DFS
 > ---
-> 📊 [연결된 데이터베이스](Etc/DFS/)
+> 📊 [DFS](Etc/DFS/)
