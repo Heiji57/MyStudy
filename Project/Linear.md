@@ -1,0 +1,113 @@
+---
+"notion_id": "2e33b799-4291-80a5-b1bc-d789b47f5356"
+"notion_url": "https://www.notion.so/2e33b799429180a5b1bcd789b47f5356"
+"상태": "완료"
+---
+
+# ✈️ \[Plain\] Linear 협업 가이드
+<callout icon="✨">
+	효율적인 업무 관리와 소통을 위해 Linear를 사용.
+	이 가이드는 리니어를 **가장 리니어답게** 쓰기 위한 최소한의 규칙입니다.
+</callout>
+## 1. 무조건 지켜야되는 규칙
+1. **Linear에 없으면 없는 일이다.** (말로 말했어도 이슈가 없으면 무효)
+2. **이슈의 상태는 내 상태입니다.** (일이 진행 중이면 반드시 `In Progress`로)
+3. **제목만 봐도 내용을 알 수 있게.** (`버그 수정` ❌ → `로그인 시 500 에러 수정` ✅)
+<empty-block/>
+---
+<empty-block/>
+## 2. 워크플로우 (Workflow)
+우리는 2주 단위의 사이클(Cycle)로 프로젝트를 진행함.
+<callout icon="📌">
+	- **Todo:** 이번 사이클에 하기로 한 일 (아직 시작 안 함).
+	- **In Progress:** 지금 내가 작업 중인 일 (한 번에 1\~2개만 유지).
+	- **In Review:** 개발 완료 후 PR(코드 리뷰) 중이거나 QA 대기 중.
+	- **Done:** 배포까지 완료된 상태
+</callout>
+<empty-block/>
+> 💡 **Tip: GitHub PR**을 올릴 때 제목에 이슈 번호(예: ENG-123)를 넣으면 자동으로 상태가 연결됨.
+<empty-block/>
+---
+<empty-block/>
+## 3. 이슈 작성 가이드 (Issue Creation)
+이슈를 만들 때 `C` 키를 눌러라.
+### ① 제목 규칙
+- `[FE]`, `[BE]`, `[Design]` 등 말머리를 달아주세요.
+- 예시: `[FE] 마이페이지 프로필 수정 UI 구현`
+### ② 필수 입력 항목 (Properties)
+이 4가지는 비워두지 않는게 좋음.
+<callout icon="📌">
+	> **Assignee (담당자):** 누가 하나요? (안 정해졌으면 공석, 내가 할 거면 `Cmd+I`)
+	> **Estimate (사이즈):** 얼마나 걸릴까요? (팀 컨벤션에 따름)
+	> **Label (라벨)**
+		- 🔴 `Bug`: 오류 수정
+		- 🔵 `Feature`: 신규 기능
+		- 🟢 `Improvement`: 개선/리팩토링
+	> **Priority (우선순위):**
+		- `Urgent`: (🚨 비상) 지금 하던 거 멈추고 이거 먼저.
+		- `High`: 이번 사이클 내 필수.
+		- `Medium`: 일반적인 업무.
+		- `Low`: 시간 남으면 함.
+</callout>
+### ③ 템플릿 사용
+내용 작성 시 **템플릿 아이콘**을 눌러 상황에 맞는 양식을 불러오기.
+- 버그 제보 → `Bug Report` 템플릿
+- 기능 명세 → `New Feather` 템플릿
+<empty-block/>
+---
+<empty-block/>
+## 4. GitHub 연동 활용법 (개발자 필독) 
+리니어와 깃허브는 한 몸처럼 움직입니다.
+1. **브랜치 따기:** 리니어 이슈 상세 화면에서 `Create Branch` 버튼을 누르거나, 브랜치 이름 복사 버튼을 눌러서 `git checkout` 하기. (자동으로 이슈와 연결됨)
+2. **PR 자동 닫기:** PR이 Merge되면 리니어 이슈도 자동으로 `Done`으로 이동함. (수동으로 옮길 필요 없음)
+<empty-block/>
+---
+<empty-block/>
+## 5. 소통 방식 (Communication)
+- **댓글:** 업무 관련 논의는 **리니어 이슈 댓글**에서 함. (**히스토리**가 남아야 함)
+- **멘션:** 특정 사람의 확인이 필요하면 `@이름`으로 호출.
+- **이모지:** "확인했습니다", "동의합니다" 같은 댓글 대신 👍, ✅ 이모지를 적극 활용.
+## 6. 놓치기 쉬운 꿀팁 (Shortcuts) 🍯
+Mac은 Cmd, Window는 Ctrl
+<table>
+<tr>
+<td>**단축키**</td>
+<td>**기능**</td>
+<td>**설명**</td>
+</tr>
+<tr>
+<td>**C**</td>
+<td>**C**reate</td>
+<td>새 이슈 만들기</td>
+</tr>
+<tr>
+<td>**F**</td>
+<td>**F**ilter</td>
+<td>원하는 이슈 검색/필터링</td>
+</tr>
+<tr>
+<td>**S**</td>
+<td>**S**tatus</td>
+<td>상태 변경 (Todo → In Progress)</td>
+</tr>
+<tr>
+<td>**Cmd + K**</td>
+<td>Command</td>
+<td>만능 검색창 (메뉴, 설정, 이슈 이동 등)</td>
+</tr>
+<tr>
+<td>**Gi**</td>
+<td>**G**o to **I**nbox</td>
+<td>내 알림함(Inbox)으로 이동</td>
+</tr>
+<tr>
+<td>**Gm**</td>
+<td>**G**o to **M**y issues</td>
+<td>내가 할 일 목록으로 이동</td>
+</tr>
+</table>
+---
+## 📅 루틴
+1. **업무 시작 직후 (****`Gm`****):** `My Issues`를 확인. 오늘 할 일의 상태를 `In Progress`로 바꾸기.
+2. **퇴근 직전:** 오늘 완료한 일은 `Done`으로 넘겼는지 확인합니다.
+3. **사이클 종료일:** 못다 한 일은 다음 사이클로 넘기거나(`Shift + C`), 백로그로 따로 빼기.
