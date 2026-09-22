@@ -1,79 +1,71 @@
----
-"notion_id": "3953b799-4291-8024-bbc2-ca806e92dd4e"
-"notion_url": "https://www.notion.so/3953b79942918024bbc2ca806e92dd4e"
-"상태": "완료"
----
-
 ## DNS (Domain Name System)
-- 웹사이트에 접속 할 떄 윌는 외우기 어려운 <span color="yellow_bg">**IP 주소 대신 도메인 주소를 사용**</span>.
-- 도메인 이름을 사용했을 때 입력한<span color="yellow_bg">** 도메인을 실제 네트워크상에서 사용하는 IP주소로 바꾸고 해당 IP 주소로 접속**</span>하는 과정이 필요.
+- 웹사이트에 접속 할 떄 윌는 외우기 어려운 **IP 주소 대신 도메인 주소를 사용**.
+- 도메인 이름을 사용했을 때 입력한** 도메인을 실제 네트워크상에서 사용하는 IP주소로 바꾸고 해당 IP 주소로 접속**하는 과정이 필요.
 - 이러한 과정, 전체 시스템을 DNS(Domain Name System)라고 함.
-- <span color="yellow_bg">**전세계적으로 약속된 규칙을 공유**</span>.
-- 상위 기관에서 인증된 기관에게 <span color="yellow_bg">**도메인을 생성하거나 IP 주소로 변경할 수 있는 ‘권한’을 부여**</span>.
-- DNS는 상위 기관과 하위 기관과 같은 ‘계층 구조’를 가지는 <span color="yellow_bg">**분산 데이터베이스 구조**</span>를 가짐. 
-<empty-block/>
+- **전세계적으로 약속된 규칙을 공유**.
+- 상위 기관에서 인증된 기관에게 **도메인을 생성하거나 IP 주소로 변경할 수 있는 ‘권한’을 부여**.
+- DNS는 상위 기관과 하위 기관과 같은 ‘계층 구조’를 가지는 **분산 데이터베이스 구조**를 가짐. 
+
 ## DNS 구성요소
-1. 이 <span color="yellow_bg">**도메인이 IP 주소라는 텍스트를 저장하는 데이터베이스가 필요**</span>.
-2. 분산된 데이터가 어디 저장되어 있는지 <span color="yellow_bg">**찾을 프로그램들이 필요**</span>하고, 찾으면 해당 <span color="yellow_bg">**IP 주소로 이동할 프로그램**</span>(브라우저 등)이 필요.
-3. 도메인 네임 스페이스라는 규칙(방법)으로 <span color="yellow_bg">**도메인 이름 저장을 분산**</span>.
-4. **네임 서버**(DNS이다. 하지만 리졸버 서버 등 시스템 안에서 다른 역할을 하는 서버도 있기에 네임서버라고 말함)가 해당 <span color="yellow_bg">**도메인을 찾음**</span>.
-5. 리졸버가** **<span color="yellow_bg">**DNS 클라이언트 요청을 네임 서버로 전달**</span>하고 <span color="yellow_bg">**찾은 정보를 클라이언트에게 제공**</span>하는 기능을 수행.
+1. 이 **도메인이 IP 주소라는 텍스트를 저장하는 데이터베이스가 필요**.
+2. 분산된 데이터가 어디 저장되어 있는지 **찾을 프로그램들이 필요**하고, 찾으면 해당 **IP 주소로 이동할 프로그램**(브라우저 등)이 필요.
+3. 도메인 네임 스페이스라는 규칙(방법)으로 **도메인 이름 저장을 분산**.
+4. **네임 서버**(DNS이다. 하지만 리졸버 서버 등 시스템 안에서 다른 역할을 하는 서버도 있기에 네임서버라고 말함)가 해당 **도메인을 찾음**.
+5. 리졸버가** ****DNS 클라이언트 요청을 네임 서버로 전달**하고 **찾은 정보를 클라이언트에게 제공**하는 기능을 수행.
 	- 리졸버는 요청을 찾아서 클라이언트에게 찾았으면 찾은 것을 못 찾았으면 못 찾았다고 전달.
-	- 리졸버는 단말에 구현하는 것은 힘듬, 보통은 <span color="yellow_bg">**리졸버가 구현된 네임 서버의 IP 주소만을 파악**</span>.
+	- 리졸버는 단말에 구현하는 것은 힘듬, 보통은 **리졸버가 구현된 네임 서버의 IP 주소만을 파악**.
 	- 대표적으로 KT/LG/SK와 같은 ISP(통신사) DNS가 있고, 브라우저 우회 용도로 많이 쓰는 구글 DNS, 클라우드플레어와 같은 Public DNS 서버가 있음.
-	<callout icon="💡" color="gray_bg">
-		**Resolver = Recursive DNS Server = Local Server(of ISP) = Recursor**
-	</callout>
-<empty-block/>
+	> **Resolver = Recursive DNS Server = Local Server(of ISP) = Recursor**
+
 ### 도메인 네임 스페이스 (Domain Name Space)
-- DNS는 전세계적인 <span color="yellow_bg">**거대한 분산 시스템**</span>.
-- 도메인 네임 스페이스는 이러한 <span color="yellow_bg">**DNS가 저장 관리하는 계층적 구조**</span>를 의미.
-- 도메인 네임 스페이스는 <span color="yellow_bg">**최상위에 루트 DNS 서버**</span>가 존재하고 그 <span color="yellow_bg">**하위로 연결된 모든 노드가 연속해서 이어진 계층 구조**</span>로 되어있음. (폴더 구조와 비슷) 
-<empty-block/>
+- DNS는 전세계적인 **거대한 분산 시스템**.
+- 도메인 네임 스페이스는 이러한 **DNS가 저장 관리하는 계층적 구조**를 의미.
+- 도메인 네임 스페이스는 **최상위에 루트 DNS 서버**가 존재하고 그 **하위로 연결된 모든 노드가 연속해서 이어진 계층 구조**로 되어있음. (폴더 구조와 비슷) 
+
 ### 네임 서버 (Name Server = DNS Server)
-- 문자열로 표현된 도메인 이름을 실제 컴퓨터가 통신할 때 사용하는 <span color="yellow_bg">**IP 주소로 변환**</span>시키기 위해서는 <span color="yellow_bg">**도메인 네임 스페이스의 트리 구조에 대한 정보가 필요**</span>하고, 이러한 <span color="yellow_bg">**정보를 가지고 있는 서버를 네임 서버**</span>라고함. 
-- 데이터베이스 역할(<span color="yellow_bg">**저장, 관리**</span>) <span color="yellow_bg">**찾아주는 역할, 요청 처리 응답**</span> 구현.
-- DNS 서버를 복사하여 <span color="yellow_bg">**같은 기능을 담당**</span>하는 **미러 서버**가 있음.
+- 문자열로 표현된 도메인 이름을 실제 컴퓨터가 통신할 때 사용하는 **IP 주소로 변환**시키기 위해서는 **도메인 네임 스페이스의 트리 구조에 대한 정보가 필요**하고, 이러한 **정보를 가지고 있는 서버를 네임 서버**라고함. 
+- 데이터베이스 역할(**저장, 관리**) **찾아주는 역할, 요청 처리 응답** 구현.
+- DNS 서버를 복사하여 **같은 기능을 담당**하는 **미러 서버**가 있음.
 ### 1. Root DNS 서버
 - ICANN이 직접 관리하는 절대 서버.
-- <span color="yellow_bg">**TLD DNS 서버 IP 주소를 저장하고 안내**</span>하는 역할.
+- **TLD DNS 서버 IP 주소를 저장하고 안내**하는 역할.
 ### 2. Top-Level Domain(TLD) DNS 서버
 - 도메인 등록 기관이 관리하는 서버.
-- <span color="yellow_bg">**Authoritative DNS 서버의 주소를 저장하고 안내**</span>하는 역할을 함.
+- **Authoritative DNS 서버의 주소를 저장하고 안내**하는 역할을 함.
 - 도메인 판매 업체(가비아 등)의 DNS 설정이 변경되면 도메인 등록 기관으로 전달되기 때문에 어떤 도메인이 어떤 판매업체에서 구매했는지 알 수 있는 것.
 ### 3. Second-Level Domain(SLD) DNS 서버 (Authoritative DNS 서버)
-- <span color="yellow_bg">**실제 개인 도메인과 IP 주소의 관계가 기록**</span>(저장, 변경)되는 서버.
-	- 그래서 **권한의 의미인 Authoritative**가 붙음. 일반적으로 <span color="yellow_bg">**도메인/호스팅 업체의 네임서버**</span>를 말함.
-- <span color="yellow_bg">**개인 DNS를 구축해도 이 경우**</span>에 해당됨.
+- **실제 개인 도메인과 IP 주소의 관계가 기록**(저장, 변경)되는 서버.
+	- 그래서 **권한의 의미인 Authoritative**가 붙음. 일반적으로 **도메인/호스팅 업체의 네임서버**를 말함.
+- **개인 DNS를 구축해도 이 경우**에 해당됨.
 ### 4. 권한 없는 DNS 서버 (리졸버 서버, 리컬시브 서버, 리커서)
-- DNS 서버는 도메인 네임 스페이스를 위한 <span color="yellow_bg">**권한 있는 DNS 서버와 권한이 없는 DNS 서버로 구분**</span>됨.
-- <span color="yellow_bg">**위 1, 2, 3은 권한 있는 DNS**</span>임.
-- 네임 스페이스를 위한 <span color="yellow_bg">**권한 있는 DNS 서버는 IP 주소와 도메인 이름을 매핑**</span>.
-- 네임 스페이스를 위한 <span color="yellow_bg">**권한 없는 DNS 서버는 질의를 통해 IP 주소를 알아내거나 캐시**</span>함.
+- DNS 서버는 도메인 네임 스페이스를 위한 **권한 있는 DNS 서버와 권한이 없는 DNS 서버로 구분**됨.
+- **위 1, 2, 3은 권한 있는 DNS**임.
+- 네임 스페이스를 위한 **권한 있는 DNS 서버는 IP 주소와 도메인 이름을 매핑**.
+- 네임 스페이스를 위한 **권한 없는 DNS 서버는 질의를 통해 IP 주소를 알아내거나 캐시**함.
 ### 리졸버 (Resolver)
-- 리졸버는 웹 브라우저와 같은 <span color="yellow_bg">**DNS 클라이언트의 요청을 네임 서버로 전달**</span>하고 <span color="yellow_bg">**네임 서버로부터 정보**</span>**(도메인 이름과 IP 주소)**<span color="yellow_bg">**를 받아 클라이언트에게 제공**</span>하는 기능을 수행.
-	- 이 과정에서 리졸버는 <span color="yellow_bg">**하나의 네임 서버에게 DNS 요청을 전달**</span>하고 해당 서버에 <span color="yellow_bg">**정보가 없으면 다른 네임 서버에게 요청을 보내**</span> 정보를 받아옴.
-- 리졸버는 수많은 네임서버에 접근하여 사용자로부터 요청 받은 <span color="yellow_bg">**도메인의 IP 정보를 조회**</span>하는 기능을 수행.
-- 리졸버에 기능을 단말에 구현하는 것은 자원의 한계가 있기에 <span color="yellow_bg">**대부분 기능을  DNS 서버에 구현**</span>하고, 클라이언트 호스트는 <span color="yellow_bg">**리졸버의 단순한 기능만을 지닌 리졸버 루틴을 구현**</span>하는 옵션이 제시됨.
-	- **단순화**된 기능의 리졸버를 **스터브 리졸버**(Stub Resolver)라고 하며, 스터브 리졸버는 수 많은 네임 서버의 구조를 파악할 필요없이 <span color="yellow_bg">**리졸버가 구현된 DNS 서버의 IP 주소만을 파악**</span>하면 됨.
-	- 클라이언트 호스트에서 설정하는 DNS 서버(Recursive DNS Server)는 이와 같은 서버를 의미하는 것으로. <span color="yellow_bg">**도메인에 대한 질의를 받은 스터브 리졸버는 설정된 DNS 서버로 DNS Query(질의)를 전달**</span>하고, <span color="yellow_bg">**DNS 서버로부터 최종 결과를 응답 받아 웹 브라우저로 전달**</span>하는 인터페이스 기능만을 수행.
+- 리졸버는 웹 브라우저와 같은 **DNS 클라이언트의 요청을 네임 서버로 전달**하고 **네임 서버로부터 정보****(도메인 이름과 IP 주소)****를 받아 클라이언트에게 제공**하는 기능을 수행.
+	- 이 과정에서 리졸버는 **하나의 네임 서버에게 DNS 요청을 전달**하고 해당 서버에 **정보가 없으면 다른 네임 서버에게 요청을 보내** 정보를 받아옴.
+- 리졸버는 수많은 네임서버에 접근하여 사용자로부터 요청 받은 **도메인의 IP 정보를 조회**하는 기능을 수행.
+- 리졸버에 기능을 단말에 구현하는 것은 자원의 한계가 있기에 **대부분 기능을  DNS 서버에 구현**하고, 클라이언트 호스트는 **리졸버의 단순한 기능만을 지닌 리졸버 루틴을 구현**하는 옵션이 제시됨.
+	- **단순화**된 기능의 리졸버를 **스터브 리졸버**(Stub Resolver)라고 하며, 스터브 리졸버는 수 많은 네임 서버의 구조를 파악할 필요없이 **리졸버가 구현된 DNS 서버의 IP 주소만을 파악**하면 됨.
+	- 클라이언트 호스트에서 설정하는 DNS 서버(Recursive DNS Server)는 이와 같은 서버를 의미하는 것으로. **도메인에 대한 질의를 받은 스터브 리졸버는 설정된 DNS 서버로 DNS Query(질의)를 전달**하고, **DNS 서버로부터 최종 결과를 응답 받아 웹 브라우저로 전달**하는 인터페이스 기능만을 수행.
 ### DNS Query
-- DNS 클라이언트와 <span color="yellow_bg">**DNS 서버는 DNS 쿼리를 교환**</span>함.
+- DNS 클라이언트와 **DNS 서버는 DNS 쿼리를 교환**함.
 - DNS 쿼리는 Recursive(재귀적) 또는 Iterative(반복적)으로 구분됨.
-<empty-block/>
+
 > **Recursive Query (재귀적 질의)**
-- <span color="yellow_bg">**결과물(IP 주소)를 돌려주는 작업**</span>. (결과적으로 Recursive 서버가 Recursive 쿼리를 웹 브라우저 등에게 돌려주는 역할)
-- **Recursive 쿼리**를 받은 <span color="yellow_bg">**Recursive**</span><span color="yellow_bg"> </span><span color="yellow_bg">**서버는 Iterative 하게 권한 있는 네임 서버로 Iterative 쿼리를 보내**</span>서 결과적으로 IP 주소를 찾게 되고 해당 결과물을 응답.
-<empty-block/>
+- **결과물(IP 주소)를 돌려주는 작업**. (결과적으로 Recursive 서버가 Recursive 쿼리를 웹 브라우저 등에게 돌려주는 역할)
+- **Recursive 쿼리**를 받은 **Recursive** **서버는 Iterative 하게 권한 있는 네임 서버로 Iterative 쿼리를 보내**서 결과적으로 IP 주소를 찾게 되고 해당 결과물을 응답.
+
 > **Iterative Query (반복적 질의)**
-- Recursive DNS 서버가 <span color="yellow_bg">**다른 DNS 서버에게 쿼리를 보내어 응답을 요청**</span>하는 작업.
-- Recursive 서버가 <span color="yellow_bg">**권한 있는 네임 서버들에게 반복적으로 쿼리를 보내**</span>서 결과물(IP 주소)를 알아냄.
-- <span color="yellow_bg">**Recursive 서버에 이미 IP 주소가 캐시 되어있다면 이 과정은 건너 뜀**</span>. 
+- Recursive DNS 서버가 **다른 DNS 서버에게 쿼리를 보내어 응답을 요청**하는 작업.
+- Recursive 서버가 **권한 있는 네임 서버들에게 반복적으로 쿼리를 보내**서 결과물(IP 주소)를 알아냄.
+- **Recursive 서버에 이미 IP 주소가 캐시 되어있다면 이 과정은 건너 뜀**. 
 ### DNS 레코드 종류
-- **SOA(Start of Authority)** : <span color="yellow_bg">**권한 시작을 지정**</span>하고, <span color="yellow_bg">**권한이 있는 서버를 가리킴**</span>.
+- **SOA(Start of Authority)** : **권한 시작을 지정**하고, **권한이 있는 서버를 가리킴**.
 - **A(Hosy Record)** : **FQDN과 32비트의 IPv4 주소를 연결**.
 - **AAAA(IPv6호스트)** : **FQDN과 128비트의 IPv6주소를 연결**.
-- **CNAME(Alias Record)** : <span color="yellow_bg">**실제 도메인 이름과 연결되는 가상 도메인 이름**</span>(별칭).
-- **MX(Mail Exchance Record)** : **주어진 사서함에 도달할 수 있는** <span color="yellow_bg">**라우팅 정보 제공**</span>.
-- **SRV(Service Resources)** : **비슷한 TCP/IP 서비스를 제공하는**<span color="yellow_bg">** 다수의 서버 위치 정보를 제공**</span>.
-- **NS(Name Server)** : <span color="yellow_bg">**도메인 서버 목록을 지정**</span>.
+- **CNAME(Alias Record)** : **실제 도메인 이름과 연결되는 가상 도메인 이름**(별칭).
+- **MX(Mail Exchance Record)** : **주어진 사서함에 도달할 수 있는** **라우팅 정보 제공**.
+- **SRV(Service Resources)** : **비슷한 TCP/IP 서비스를 제공하는**** 다수의 서버 위치 정보를 제공**.
+- **NS(Name Server)** : **도메인 서버 목록을 지정**.
