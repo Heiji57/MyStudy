@@ -2,6 +2,10 @@
   "files": [
     "AI CS/harness.md",
     "AI CS/md 파일 사용.md",
+    "AX & AI/LangChain.md",
+    "AX & AI/ML (Machine Learning).md",
+    "AX & AI/RAG.md",
+    "AX & AI/Vector DB.md",
     "Algorithm/DFS & BFS.md",
     "Algorithm/Dijkstra.md",
     "Algorithm/Floyd-Warshall.md",
@@ -169,6 +173,7 @@
     "assets/b7f3e28be7cb.png",
     "assets/b971b8d13a66.png",
     "assets/bb655ae8a577.png",
+    "assets/bd91742bafed.png",
     "assets/c99225f96c25.png",
     "assets/ce78ca2a68a4.png",
     "assets/d053a4d28878.png",
