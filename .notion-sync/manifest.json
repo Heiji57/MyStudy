@@ -2,10 +2,13 @@
   "files": [
     "AI CS/harness.md",
     "AI CS/md 파일 사용.md",
+    "AX & AI/Attention.md",
     "AX & AI/LangChain.md",
     "AX & AI/ML (Machine Learning).md",
     "AX & AI/RAG.md",
+    "AX & AI/Transformer.md",
     "AX & AI/Vector DB.md",
+    "AX & AI/embedding.md",
     "Algorithm/DFS & BFS.md",
     "Algorithm/Dijkstra.md",
     "Algorithm/Floyd-Warshall.md",
